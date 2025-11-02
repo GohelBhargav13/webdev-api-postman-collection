@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "032210ba-9b14-4d5c-b154-f2830b26709b",
+		"name": "videoStreamApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42621580",
+		"_collection_link": "https://winter-spaceship-725369.postman.co/workspace/Web-Dev~85d0a64c-7745-404b-892a-9047ed54e702/collection/42621580-032210ba-9b14-4d5c-b154-f2830b26709b?action=share&source=collection_link&creator=42621580"
+	},
+	"item": [
+		{
+			"name": "VIDEOS",
+			"item": [
+				{
+					"name": "Upload-videos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "videoTitle",
+									"value": "Learn Coding",
+									"type": "text"
+								},
+								{
+									"key": "videoDescription",
+									"value": "Learn programming Language for the knowledge",
+									"type": "text"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/C:/Users/gohel/Downloads/computer_videos.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/video/upload-videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"video",
+								"upload-videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-All-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/video/get-videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"video",
+								"get-videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-video-by-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/video/get-video/68f7aa72cd8e4b38acbd6b2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"video",
+								"get-video",
+								"68f7aa72cd8e4b38acbd6b2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VideoLike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/video/video-like/68f7aa72cd8e4b38acbd6b2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"video",
+								"video-like",
+								"68f7aa72cd8e4b38acbd6b2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Video-comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"Nice Video\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/video/video-comment/68f7aa72cd8e4b38acbd6b2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"video",
+								"video-comment",
+								"68f7aa72cd8e4b38acbd6b2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Video-comment-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/video/video-comment-delete/68f7aa72cd8e4b38acbd6b2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"video",
+								"video-comment-delete",
+								"68f7aa72cd8e4b38acbd6b2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Video-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/video/delete-videos/68f7aa72cd8e4b38acbd6b2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"video",
+								"delete-videos",
+								"68f7aa72cd8e4b38acbd6b2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-recents",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "RegisterUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userEmail",
+									"value": "gohelbhargav401@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userFirstName",
+									"value": "bhargav",
+									"type": "text"
+								},
+								{
+									"key": "userLastName",
+									"value": "Gohel",
+									"type": "text"
+								},
+								{
+									"key": "userPassword",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "user_avatar",
+									"type": "file",
+									"src": "/C:/Users/gohel/OneDrive/Documents/My Documents/photo.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EmailVerification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/verify-email/:token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verify-email",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Userlogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\":\"gohelbhargav401@gmail.com\",\r\n    \"userPassword\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLikedVideos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UserVideos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "All-users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "changeUserRole",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userRole\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/change-userRole/68fe04d04d376b3c1b874724",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"change-userRole",
+								"68fe04d04d376b3c1b874724"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-count",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get-video-count",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PLAYLISTS",
+			"item": [
+				{
+					"name": "New-Playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playListName\":\"New_playlist\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/playlist/create-playlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"playlist",
+								"create-playlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Own-Playlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/playlist/get-playlists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"playlist",
+								"get-playlists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add-videos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/playlist/add-videos/68f7aa72cd8e4b38acbd6b2d/68f8d7ca80b5174c3609967e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"playlist",
+								"add-videos",
+								"68f7aa72cd8e4b38acbd6b2d",
+								"68f8d7ca80b5174c3609967e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-playlist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/playlist/delete-playlist/68f8d7ca80b5174c3609967e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"playlist",
+								"delete-playlist",
+								"68f8d7ca80b5174c3609967e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
